@@ -1,0 +1,113 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+INC_DIR	Makefile	/^INC_DIR	= .\/include$/;"	m
+SRC_DIR	Makefile	/^SRC_DIR = .\/src$/;"	m
+OBJ_DIR	Makefile	/^OBJ_DIR	= .\/object$/;"	m
+SRC_FILES	Makefile	/^SRC_FILES = $(wildcard $(SRC_DIR)\/*.c)$/;"	m
+OBJ_FILES	Makefile	/^OBJ_FILES = $(SRC_FILES:.c=.o)$/;"	m
+OBJ_PATH	Makefile	/^OBJ_PATH  = $(patsubst $(SRC_DIR)\/%,$(OBJ_DIR)\/%,$(OBJ_FILES))$/;"	m
+LIBS	Makefile	/^LIBS	= $/;"	m
+CC	Makefile	/^CC	= gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS	= -g -I$(INC_DIR)$/;"	m
+CONTROL_HANDLER_LIB_H_	include/control_header_lib.h	2;"	d
+CNTRL_HEADER_SIZE	include/control_header_lib.h	4;"	d
+CNTRL_RESP_HEADER_SIZE	include/control_header_lib.h	5;"	d
+PACKET_USING_STRUCT	include/control_header_lib.h	7;"	d
+CONTROL_HEADER	include/control_header_lib.h	/^    struct __attribute__((__packed__)) CONTROL_HEADER$/;"	s
+dest_ip_addr	include/control_header_lib.h	/^        uint32_t dest_ip_addr;$/;"	m	struct:CONTROL_HEADER
+control_code	include/control_header_lib.h	/^        uint8_t control_code;$/;"	m	struct:CONTROL_HEADER
+response_time	include/control_header_lib.h	/^        uint8_t response_time;$/;"	m	struct:CONTROL_HEADER
+payload_len	include/control_header_lib.h	/^        uint16_t payload_len;$/;"	m	struct:CONTROL_HEADER
+CONTROL_RESPONSE_HEADER	include/control_header_lib.h	/^    struct __attribute__((__packed__)) CONTROL_RESPONSE_HEADER$/;"	s
+controller_ip_addr	include/control_header_lib.h	/^        uint32_t controller_ip_addr;$/;"	m	struct:CONTROL_RESPONSE_HEADER
+control_code	include/control_header_lib.h	/^        uint8_t control_code;$/;"	m	struct:CONTROL_RESPONSE_HEADER
+response_code	include/control_header_lib.h	/^        uint8_t response_code;$/;"	m	struct:CONTROL_RESPONSE_HEADER
+payload_len	include/control_header_lib.h	/^        uint16_t payload_len;$/;"	m	struct:CONTROL_RESPONSE_HEADER
+NETWORK_UTIL_H_	include/network_util.h	2;"	d
+AUTHOR_H_	include/author.h	2;"	d
+CONTROL_HANDLER_H_	include/control_handler.h	2;"	d
+CONNECTION_MANAGER_H_	include/connection_manager.h	2;"	d
+control_socket	include/connection_manager.h	/^int control_socket, router_socket, data_socket;$/;"	v
+router_socket	include/connection_manager.h	/^int control_socket, router_socket, data_socket;$/;"	v
+data_socket	include/connection_manager.h	/^int control_socket, router_socket, data_socket;$/;"	v
+master_list	include/connection_manager.h	/^fd_set master_list, watch_list;$/;"	v
+watch_list	include/connection_manager.h	/^fd_set master_list, watch_list;$/;"	v
+head_fd	include/connection_manager.h	/^int head_fd;$/;"	v
+GLOBAL_H_	include/global.h	2;"	d
+FALSE	include/global.h	/^typedef enum {FALSE, TRUE} bool;$/;"	e	enum:__anon1
+TRUE	include/global.h	/^typedef enum {FALSE, TRUE} bool;$/;"	e	enum:__anon1
+bool	include/global.h	/^typedef enum {FALSE, TRUE} bool;$/;"	t	typeref:enum:__anon1
+ERROR	include/global.h	11;"	d
+BUILD_BUG_ON	include/global.h	14;"	d
+ROUTING_PACKET_F	include/global.h	16;"	d
+ROUTING_PACKET_V	include/global.h	17;"	d
+ROUTING_TO_CONTROLLER_PACKET	include/global.h	18;"	d
+CONTROL_PORT	include/global.h	/^uint16_t CONTROL_PORT;$/;"	v
+No_of_routers	include/global.h	/^uint16_t No_of_routers;$/;"	v
+periodic_interval	include/global.h	/^uint16_t periodic_interval;$/;"	v
+router_index	include/global.h	/^int router_index;$/;"	v
+peer_address	include/global.h	/^struct sockaddr_in peer_address;$/;"	v	typeref:struct:sockaddr_in
+neighbour_routers	include/global.h	/^struct neighbour_routers $/;"	s
+router_id	include/global.h	/^	uint16_t router_id;$/;"	m	struct:neighbour_routers
+router_port	include/global.h	/^	uint16_t router_port;$/;"	m	struct:neighbour_routers
+data_port	include/global.h	/^	uint16_t data_port;$/;"	m	struct:neighbour_routers
+link_cost	include/global.h	/^	uint16_t link_cost;$/;"	m	struct:neighbour_routers
+init_link_cost	include/global.h	/^	uint16_t init_link_cost;$/;"	m	struct:neighbour_routers
+router_ip_add	include/global.h	/^	uint32_t router_ip_add;$/;"	m	struct:neighbour_routers
+next_hop	include/global.h	/^	uint32_t next_hop;$/;"	m	struct:neighbour_routers
+alive	include/global.h	/^	int alive;$/;"	m	struct:neighbour_routers
+peers	include/global.h	/^}peers[6];$/;"	v	typeref:struct:neighbour_routers
+distance_vector_from_peer	include/global.h	/^struct distance_vector_from_peer$/;"	s
+peer_ip	include/global.h	/^	uint32_t peer_ip;$/;"	m	struct:distance_vector_from_peer
+peer_port	include/global.h	/^	uint16_t peer_port;$/;"	m	struct:distance_vector_from_peer
+peer_cost	include/global.h	/^	uint16_t peer_cost;$/;"	m	struct:distance_vector_from_peer
+valid	include/global.h	/^	int valid;$/;"	m	struct:distance_vector_from_peer
+recvALL	src/network_util.c	/^ssize_t recvALL(int sock_index, char *buffer, ssize_t nbytes)$/;"	f
+sendALL	src/network_util.c	/^ssize_t sendALL(int sock_index, char *buffer, ssize_t nbytes)$/;"	f
+CNTRL_RESP_CONTROL_CODE_OFFSET	src/control_header_lib.c	31;"	d	file:
+CNTRL_RESP_RESPONSE_CODE_OFFSET	src/control_header_lib.c	32;"	d	file:
+CNTRL_RESP_PAYLOAD_LEN_OFFSET	src/control_header_lib.c	33;"	d	file:
+create_response_header	src/control_header_lib.c	/^char* create_response_header(int sock_index, uint8_t control_code, uint8_t response_code, uint16_t payload_len)$/;"	f
+main	src/pbarsale_assignment3.c	/^int main(int argc, char **argv)$/;"	f
+CNTRL_CONTROL_CODE_OFFSET	src/control_handler.c	38;"	d	file:
+CNTRL_PAYLOAD_LEN_OFFSET	src/control_handler.c	39;"	d	file:
+ControlConn	src/control_handler.c	/^struct ControlConn$/;"	s	file:
+sockfd	src/control_handler.c	/^    int sockfd;$/;"	m	struct:ControlConn	file:
+connection	src/control_handler.c	/^}*connection, *conn_temp;$/;"	v	typeref:struct:ControlConn
+conn_temp	src/control_handler.c	/^}*connection, *conn_temp;$/;"	v	typeref:struct:ControlConn
+create_control_sock	src/control_handler.c	/^int create_control_sock()$/;"	f
+new_control_conn	src/control_handler.c	/^int new_control_conn(int sock_index)$/;"	f
+remove_control_conn	src/control_handler.c	/^void remove_control_conn(int sock_index)$/;"	f
+isControl	src/control_handler.c	/^bool isControl(int sock_index)$/;"	f
+control_recv_hook	src/control_handler.c	/^bool control_recv_hook(int sock_index)$/;"	f
+INTERVAL_OFFSET	src/control_action.c	37;"	d	file:
+ROUTER_ID_OFFSET	src/control_action.c	38;"	d	file:
+ROUTER_PORT_OFFSET	src/control_action.c	39;"	d	file:
+DATA_PORT_OFFSET	src/control_action.c	40;"	d	file:
+LINK_COST_OFFSET	src/control_action.c	41;"	d	file:
+IP_ADDRESS_OFFSET	src/control_action.c	42;"	d	file:
+ROUTER_INFO	src/control_action.c	43;"	d	file:
+SOURCE_ROUTER_PORT	src/control_action.c	48;"	d	file:
+SOURCE_ROUTER_IP	src/control_action.c	49;"	d	file:
+DEST_ROUTER_IP	src/control_action.c	50;"	d	file:
+DEST_ROUTER_PORT	src/control_action.c	51;"	d	file:
+DEST_ROUTER_ID	src/control_action.c	52;"	d	file:
+DEST_COST	src/control_action.c	53;"	d	file:
+DEST_INFO	src/control_action.c	54;"	d	file:
+NEXT_HOP_ID	src/control_action.c	58;"	d	file:
+LINK_COST	src/control_action.c	59;"	d	file:
+ROUTER_INFO_SIZE	src/control_action.c	60;"	d	file:
+init_action	src/control_action.c	/^void init_action(int sock_index, char *cntrl_payload)$/;"	f
+init_response	src/control_action.c	/^void init_response(int sock_index)$/;"	f
+send_routing_updates	src/control_action.c	/^void send_routing_updates()$/;"	f
+send_routing_to_controller	src/control_action.c	/^void send_routing_to_controller(int sock_index)$/;"	f
+crash_response	src/control_action.c	/^void crash_response(int sock_index)$/;"	f
+run_distance_vector	src/control_action.c	/^void run_distance_vector(char *routing_packet)$/;"	f
+main_loop	src/connection_manager.c	/^void main_loop()$/;"	f
+init	src/connection_manager.c	/^void init()$/;"	f
+AUTHOR_STATEMENT	src/author.c	30;"	d	file:
+author_response	src/author.c	/^void author_response(int sock_index)$/;"	f
